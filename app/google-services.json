@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "677511947798",
+    "project_id": "wandr-311108",
+    "storage_bucket": "wandr-311108.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:677511947798:android:b6e34520f4d0cd6954f737",
+        "android_client_info": {
+          "package_name": "com.example.piraterun"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "677511947798-rnl180cnfalj3cb61ticstdfobf5b761.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWeIIXu6HbVB5M4YOQOXQoF0L1KOVzRs0",
+          "current_key_old": "AIzaSyBxaaPEpdOlIadRdH2djcG9PO8hGUhZUls"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "677511947798-rnl180cnfalj3cb61ticstdfobf5b761.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

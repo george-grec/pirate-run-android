@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.example.piraterun.ui.gamemenu.GameMenuViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/game_menu_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.gamemenu.GameMenuFragment">
+
+        <TextView
+            android:id="@+id/game_name"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:fontFamily="@font/pirata_one"
+            android:text="@string/app_name"
+            android:textSize="46sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/map_app_icon" />
+
+        <ImageView
+            android:id="@+id/map_app_icon"
+            android:layout_width="169dp"
+            android:layout_height="162dp"
+            android:contentDescription="@string/icon"
+            android:src="@drawable/ic_launcher_foreground"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/treasure_hunt"
+            android:layout_width="260dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="12dp"
+            android:drawableLeft="@drawable/coin"
+            android:drawableRight="@drawable/coin"
+            android:text="@string/treasure_hunt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/player" />
+
+        <Button
+            android:id="@+id/friends"
+            android:layout_width="260dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="12dp"
+            android:text="@string/friends"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/shop" />
+
+        <Button
+            android:id="@+id/shop"
+            android:layout_width="260dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="12dp"
+            android:text="@string/shop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scavenge" />
+
+        <Button
+            android:id="@+id/scavenge"
+            android:layout_width="260dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="12dp"
+            android:drawableLeft="@drawable/pirat"
+            android:drawableRight="@drawable/pirat"
+            android:text="@string/scavenge"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/treasure_hunt" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/player"
+            android:layout_width="260dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="12dp"
+            android:clickable="true"
+            app:layout_constraintBottom_toTopOf="@+id/treasure_hunt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/game_name">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/blue">
+
+                <ImageView
+                    android:id="@+id/avatar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:contentDescription="@string/avatar"
+                    android:src="@drawable/ic_pirate"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="24dp"
+                    android:layout_toEndOf="@id/avatar"
+                    android:text="@{viewmodel.loggedInUser.username}"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/avatar"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/coins"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/username"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="24dp"
+                    android:text="@{Integer.toString(viewmodel.loggedInUser.coins)}"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/avatar"
+                    app:layout_constraintTop_toBottomOf="@+id/username" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

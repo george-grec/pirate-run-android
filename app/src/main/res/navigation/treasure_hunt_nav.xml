@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/treasure_hunt_nav"
+    app:startDestination="@id/treasureHuntSelectFragment">
+
+    <fragment
+        android:id="@+id/treasureHuntSelectFragment"
+        android:name="com.example.piraterun.ui.treasure_hunt.TreasureHuntSelectFragment"
+        android:label="fragment_treasure_hunt_select"
+        tools:layout="@layout/treasure_hunt_select_fragment" />
+</navigation>
