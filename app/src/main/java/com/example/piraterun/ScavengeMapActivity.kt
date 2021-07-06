@@ -496,6 +496,10 @@ class ScavengeMapActivity : AppCompatActivity(), OnMapReadyCallback,
         }
     }
 
+
+
+    // TODO: fix overlay
+    // TODO: add shop functionality
     /**
      * Displays a dialog with error message explaining that the location permission is missing.
      */
