@@ -48,7 +48,7 @@ class LoginActivity : AppCompatActivity() {
                 if (pendingDynamicLinkData != null) {
                     deepLink = pendingDynamicLinkData.link
                     Log.i("link", deepLink!!.getQueryParameter("game_id").toString())
-                    intent.putExtra("game_id", deepLink!!.getQueryParameter("game_id").toString())
+                    intent.putExtra("game_id", deepLink.getQueryParameter("game_id").toString())
                 }
 
                 // Handle the deep link.
